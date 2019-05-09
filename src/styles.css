@@ -1,0 +1,309 @@
+body {
+  font-family: sans-serif;
+}
+button {
+  font-family: Poppins, Roboto, sans-serif;
+  background-color: #40a9f3;
+  background-size: 720%;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  user-select: none;
+  font-size: 0.875em;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #66b9f4;
+  border-image: initial;
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 0.5em 0.7em;
+}
+#hide-loader {
+  margin: 0 auto;
+}
+/**************************************************************/
+/**************************************************************/
+/**************************************************************/
+#fullscreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(51, 51, 51, 0.96);
+  z-index: 10;
+}
+#fullscreen .loader-message {
+  color: white;
+  text-align: center;
+}
+/* loading message */
+#loading-message {
+  color: white;
+  text-align: center;
+  top: 20px;
+  margin-top: 40px;
+  font-size: 2em;
+  z-index: 100;
+  top: 60px;
+  left: 20px;
+  position: relative;
+}
+.blink-me {
+  animation: blinker 2s linear infinite;
+  opacity: 0.9;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/**************************************************************/
+/*********** STARS ********************************************/
+/**************************************************************/
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-moz-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+@-ms-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.stars {
+  background: #000 url(assets/stars.png) repeat top center;
+  /* opacity: 0.4; */
+  z-index: 0;
+}
+.twinkling {
+  background: transparent url(assets/twinkling.png) repeat top center;
+  z-index: 1;
+  -moz-animation: move-twink-back 200s linear infinite;
+  -ms-animation: move-twink-back 200s linear infinite;
+  -o-animation: move-twink-back 200s linear infinite;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
+}
+
+/**************************************************************/
+/*********** Jupiter + Moons **********************************/
+/**************************************************************/
+/* Solar System Styles */
+ul.jupyter-system {
+  list-style: none;
+  -webkit-transition: all 0.09s ease-in;
+  -moz-transition: all 0.09s ease-in;
+  -o-transition: all 0.09s ease-in;
+  transition: all 0.09s ease-in;
+  margin: 0 auto;
+  z-index: 100;
+  width: 300px;
+  position: relative;
+}
+/* rings */
+ul.jupyter-system li {
+  text-indent: -9999px;
+  display: block;
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0.7;
+}
+/* planets */
+ul.jupyter-system li span {
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+ul.jupyter-system li.jupyter {
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  background: #e0ae6f;
+  background-image: url("assets/jupiter.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 50px 50px;
+  top: 302px;
+  left: 150px;
+  border: none;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+ul.jupyter-system li.io {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 52px;
+  -moz-border-radius: 52px;
+  border-radius: 52px;
+  top: 270px;
+  left: 120px;
+  z-index: 99;
+}
+ul.jupyter-system li.io span {
+  background: #fbee8b;
+  top: 10px;
+  left: 10px;
+}
+ul.jupyter-system li.europa {
+  width: 160px;
+  height: 160px;
+  -webkit-border-radius: 82px;
+  -moz-border-radius: 82px;
+  border-radius: 82px;
+  top: 240px;
+  left: 90px;
+  z-index: 98;
+}
+ul.jupyter-system li.europa span {
+  background: #97744a;
+  top: 118px;
+  left: 5px;
+}
+ul.jupyter-system li.ganymede {
+  width: 220px;
+  height: 220px;
+  -webkit-border-radius: 112px;
+  -moz-border-radius: 112px;
+  border-radius: 112px;
+  top: 210px;
+  left: 60px;
+  z-index: 97;
+}
+ul.jupyter-system li.ganymede span {
+  background: #b4adb5;
+  top: 56px;
+  left: 5px;
+}
+ul.jupyter-system li.ganymede span.moon {
+  width: 4px;
+  height: 4px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #ccc;
+  top: 12px;
+  left: 12px;
+}
+ul.jupyter-system li.callisto {
+  width: 280px;
+  height: 280px;
+  -webkit-border-radius: 142px;
+  -moz-border-radius: 142px;
+  border-radius: 142px;
+  top: 180px;
+  left: 30px;
+  z-index: 96;
+}
+ul.jupyter-system li.callisto span {
+  background: #c6b4a9;
+  top: 0px;
+  left: 175px;
+}
+
+/**************************************************************/
+/*********** Jupiter + Moons  ANIMATIONS***********************/
+/**************************************************************/
+ul.jupyter-system li {
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-name: orbit;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-name: orbit;
+}
+ul.jupyter-system li.ganymede span {
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+}
+ul.jupyter-system li.io {
+  -webkit-animation-duration: 1.5s;
+  -moz-animation-duration: 1.5s;
+}
+ul.jupyter-system li.europa {
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+}
+ul.jupyter-system li.ganymede {
+  -webkit-animation-duration: 6s;
+  -moz-animation-duration: 6s;
+}
+ul.jupyter-system li.ganymede span {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+}
+ul.jupyter-system li.callisto {
+  -webkit-animation-duration: 10s;
+  -moz-animation-duration: 10s;
+}
+ul.jupyter-system li.asteroids_meteorids {
+  -webkit-animation-duration: 25s;
+  -moz-animation-duration: 25s;
+}
+@-webkit-keyframes orbit {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes orbit {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
